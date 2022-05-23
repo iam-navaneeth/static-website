@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    text-align: left center;
+    color: blueviolet;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: 10px;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 15px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: black;
+    font: none;
+    font-size: 14px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    height: 5px;
+    width: 90%;
+    color: rgb(8, 8, 8);
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+}
+.text-box h1{
+    font-size: 62px;
+    margin-top: 500px;
+}
+.text-box p{
+    margin: 18px 0px 40px;
+    font-size: 14px;
+    color: rgb(12, 12, 12);
+    margin-left: 15px;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid rgb(13, 13, 13);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.hero-btn:hover{
+    border: 1px solid #fa2111;
+    background: #f44336;
+    transition: 1s;
+}
+.img-st{
+    position: absolute;
+    left: 60%;
+    height: 1%;
+    margin-top: 5%;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+   }
+   .nav-links ul li{
+       display: block;
+   }
+   .nav-links{
+       position: absolute;
+       background: #f44336;
+       height: 100vh;
+       width: 200px;
+       top: 0;
+       right: 0;
+       text-align: left;
+       z-index: 2;
+   }
+}
